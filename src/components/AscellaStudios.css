@@ -1,0 +1,149 @@
+.ascella-studios {
+  padding: 6rem 0;
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.ascella-background {
+  background: var(--accent-gradient);
+  padding: 4rem 2rem;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ascella-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.ascella-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.ascella-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.ascella-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ascella-description {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.ascella-mission {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 2rem 0;
+  backdrop-filter: blur(10px);
+}
+
+.ascella-mission h3 {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.ascella-mission p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  line-height: 1.8;
+}
+
+.ascella-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: white;
+  color: var(--accent);
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ascella-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+  color: var(--accent-light);
+}
+
+.ascella-note {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .ascella-studios {
+    padding: 4rem 0;
+  }
+
+  .ascella-background {
+    padding: 3rem 1.5rem;
+    border-radius: 16px;
+  }
+
+  .ascella-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .ascella-title {
+    font-size: 2.25rem;
+  }
+
+  .ascella-description {
+    font-size: 1.1rem;
+  }
+
+  .ascella-mission {
+    padding: 1.5rem;
+  }
+
+  .ascella-mission h3 {
+    font-size: 1.25rem;
+  }
+
+  .ascella-mission p {
+    font-size: 1rem;
+  }
+}
