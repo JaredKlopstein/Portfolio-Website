@@ -101,23 +101,7 @@ const blogPosts = [
 ];
 ```
 
-### 5. Resume
-
-Update the resume download link in [src/components/Resume.jsx](src/components/Resume.jsx):
-
-```javascript
-<a
-  href="/path/to/your-resume.pdf" // Replace with your resume file
-  className="btn btn-primary download-btn"
-  download
->
-  Download Resume
-</a>
-```
-
-Place your resume PDF file in the `public` folder, then update the link to `/your-resume.pdf`.
-
-### 6. EmailJS Setup (Contact Form)
+### 7. EmailJS Setup (Contact Form)
 
 The contact form uses EmailJS to send emails. Follow these steps:
 
@@ -151,9 +135,9 @@ const TEMPLATE_ID = 'your_template_id_here';
 const PUBLIC_KEY = 'your_public_key_here';
 ```
 
-### 7. Ascella Studios
+### 8. Business Section
 
-Update Ascella Studios content in [src/components/AscellaStudios.jsx](src/components/AscellaStudios.jsx):
+Update content in [src/components/AscellaStudios.jsx](src/components/AscellaStudios.jsx) to be your own:
 - Update the description and mission statement
 - Add the website link when ready (replace `#` with actual URL)
 
@@ -195,7 +179,6 @@ portfolio-website/
 │   │   ├── Projects.jsx
 │   │   ├── Skills.jsx
 │   │   ├── Blog.jsx
-│   │   ├── Resume.jsx
 │   │   ├── Contact.jsx
 │   │   └── Footer.jsx
 │   ├── App.jsx          # Main app component
