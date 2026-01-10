@@ -9,6 +9,7 @@
   --border-color: #dee2e6;
   --shadow: rgba(0, 0, 0, 0.1);
   --shadow-lg: rgba(0, 0, 0, 0.15);
+  --header-bg-scrolled: rgba(255, 255, 255, 0.85);
   --accent: #10b981;
   --accent-light: #34d399;
   --accent-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
@@ -27,6 +28,7 @@
   --border-color: #343a40;
   --shadow: rgba(0, 0, 0, 0.3);
   --shadow-lg: rgba(0, 0, 0, 0.5);
+  --header-bg-scrolled: rgba(15, 15, 15, 0.85);
   --accent: #34d399;
   --accent-light: #6ee7b7;
   --accent-gradient: linear-gradient(135deg, #34d399 0%, #10b981 100%);
