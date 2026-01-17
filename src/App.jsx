@@ -33,7 +33,7 @@ function App() {
         <Hero />
         <About />
         <AscellaStudios />
-        <Projects />
+        {/* <Projects /> */}
         <Skills />
         <Blog />
         <Contact theme={theme} />
