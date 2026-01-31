@@ -2,16 +2,15 @@ import { Calendar, ArrowRight, Clock } from 'lucide-react';
 import './Blog.css';
 
 const Blog = () => {
-  // Placeholder blog posts - easy to update later
   const blogPosts = [
     {
       id: 1,
-      title: 'First Blog Post Coming Soon',
-      date: 'TBD',
-      excerpt: 'Stay tuned for thoughts on building, learning, and exploring technology.',
-      readTime: '5 min read',
-      link: '#',
-      status: 'coming-soon'
+      title: '90 Days to $5K MRR: The Challenge Begins',
+      date: 'Jan 30, 2026',
+      excerpt: 'I\'m publicly committing to a 90-day challenge to hit $5,000 in monthly recurring revenue with Ascella Studios.',
+      readTime: '4 min read',
+      link: 'https://jaredklopstein.substack.com/p/90-days-to-5k-mrr-the-challenge-begins',
+      status: 'live'
     }
   ];
 
@@ -56,7 +55,9 @@ const Blog = () => {
         </div>
 
         <div className="blog-cta">
-          <p>More posts coming soon as I share my journey and learnings!</p>
+          <a href="https://jaredklopstein.substack.com/" target="_blank" rel="noopener noreferrer" className="substack-link">
+            Follow along on Substack →
+          </a>
         </div>
       </div>
     </section>
