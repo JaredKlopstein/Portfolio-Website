@@ -4,6 +4,15 @@ import './Blog.css';
 const Blog = () => {
   const blogPosts = [
     {
+      id: 2,
+      title: 'I\'m Building a Lead Gen Platform to Fund My B2B Business',
+      date: 'Feb 4, 2026',
+      excerpt: 'A two-product strategy where HomeHelpersCo generates leads that become warm prospects for Ascella Solutions\' automation services.',
+      readTime: '5 min read',
+      link: 'https://jaredklopstein.substack.com/p/im-building-a-lead-gen-platform-to',
+      status: 'live'
+    },
+    {
       id: 1,
       title: '90 Days to $5K MRR: The Challenge Begins',
       date: 'Jan 30, 2026',

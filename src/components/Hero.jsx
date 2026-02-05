@@ -26,9 +26,9 @@ const Hero = () => {
           <div className="hero-ctas">
             <button
               className="btn btn-primary"
-              onClick={() => scrollToSection('projects')}
+              onClick={() => scrollToSection('ascella')}
             >
-              View Projects
+              View My Work
             </button>
             <button
               className="btn btn-secondary"
