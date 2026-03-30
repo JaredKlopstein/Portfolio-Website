@@ -6,7 +6,6 @@ import About from './components/About';
 import AscellaStudios from './components/AscellaStudios';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
-import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -35,7 +34,7 @@ function App() {
         <AscellaStudios />
         {/* <Projects /> */}
         <Skills />
-        <Blog />
+        {/* <Blog /> */}
         <Contact theme={theme} />
       </main>
       <Footer />

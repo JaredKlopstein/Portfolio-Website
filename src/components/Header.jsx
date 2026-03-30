@@ -26,7 +26,6 @@ const Header = ({ theme, toggleTheme }) => {
     { id: 'about', label: 'About' },
     { id: 'ascella', label: 'Ascella Studios' },
     { id: 'skills', label: 'Skills' },
-    { id: 'blog', label: 'Blog' },
     { id: 'contact', label: 'Contact' },
   ];
 
