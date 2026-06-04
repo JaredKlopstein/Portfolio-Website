@@ -3,10 +3,9 @@ import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import Currently from './components/Currently';
 import AscellaStudios from './components/AscellaStudios';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
+import SayHi from './components/SayHi';
 import Footer from './components/Footer';
 
 function App() {
@@ -31,11 +30,9 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Currently />
         <AscellaStudios />
-        {/* <Projects /> */}
-        <Skills />
-        {/* <Blog /> */}
-        <Contact theme={theme} />
+        <SayHi />
       </main>
       <Footer />
     </div>

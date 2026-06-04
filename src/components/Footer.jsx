@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, ArrowUp, Heart, Coffee } from 'lucide-react';
+import { Github, Linkedin, Twitter, ArrowUp } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
@@ -12,7 +12,6 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <h3 className="footer-name">Jared Klopstein</h3>
-            <p className="footer-tagline">Builder of Things</p>
           </div>
 
           <div className="footer-section">
@@ -62,10 +61,7 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <p className="copyright">
-            © {new Date().getFullYear()} Jared Klopstein. All rights reserved.
-          </p>
-          <p className="footer-motto">
-            Built with <Coffee size={16} className="inline-icon" /> and curiosity
+            © {new Date().getFullYear()} Jared Klopstein.
           </p>
         </div>
       </div>

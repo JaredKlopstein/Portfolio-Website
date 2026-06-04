@@ -14,13 +14,11 @@ const Hero = () => {
       <div className="hero-content">
         <div className="hero-text">
           <h1 className="hero-title">
-            Hi, I'm <span className="highlight">Jared Klopstein</span>
+            <span className="highlight">Jared Klopstein</span>
           </h1>
-          <h2 className="hero-subtitle">Builder of Things</h2>
+          <h2 className="hero-subtitle">I build apps and explore technology.</h2>
           <p className="hero-tagline">
-            Founder of <span className="highlight">Ascella Studios</span>
-            <br />
-            Building apps and exploring the infinite landscape of technology
+            Founder of <span className="highlight">Ascella Studios</span>.
           </p>
 
           <div className="hero-ctas">
@@ -28,13 +26,13 @@ const Hero = () => {
               className="btn btn-primary"
               onClick={() => scrollToSection('ascella')}
             >
-              View My Work
+              What I'm building
             </button>
             <button
               className="btn btn-secondary"
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection('say-hi')}
             >
-              Get in Touch
+              Get in touch
             </button>
           </div>
 
@@ -70,8 +68,7 @@ const Hero = () => {
         </div>
 
         <div className="scroll-indicator" onClick={() => scrollToSection('about')}>
-          <ArrowDown size={24} className="bounce" />
-          <span>Scroll to explore</span>
+          <ArrowDown size={20} />
         </div>
       </div>
     </section>

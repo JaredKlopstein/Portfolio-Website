@@ -34,15 +34,12 @@ const Contact = ({ theme }) => {
         throw new Error('Please complete the reCAPTCHA verification');
       }
 
-      const SERVICE_ID = 'service_2em29tg';
-      const TEMPLATE_ID = 'template_9uumvxq';
-      const PUBLIC_KEY = 'bAUtINrrPb6oEmrac';
+      const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-      // Check if credentials are set
-      if (SERVICE_ID === 'YOUR_SERVICE_ID' ||
-          TEMPLATE_ID === 'YOUR_TEMPLATE_ID' ||
-          PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
-        throw new Error('Please configure your EmailJS credentials in Contact.jsx');
+      if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+        throw new Error('Email service is not configured. Please email me directly at hello@jaredklopstein.dev');
       }
 
       await emailjs.send(
@@ -144,7 +141,7 @@ const Contact = ({ theme }) => {
                 <ReCAPTCHA
                   key={theme}
                   ref={recaptchaRef}
-                  sitekey="6LdGV0YsAAAAAHkc3npEKFzMYVFJpwDGbuE0pJ55"
+                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                   theme={theme}
                 />
               </div>

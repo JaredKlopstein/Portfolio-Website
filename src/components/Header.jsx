@@ -24,9 +24,9 @@ const Header = ({ theme, toggleTheme }) => {
 
   const navLinks = [
     { id: 'about', label: 'About' },
+    { id: 'currently', label: 'Currently' },
     { id: 'ascella', label: 'Ascella Studios' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'say-hi', label: 'Say hi' },
   ];
 
   return (

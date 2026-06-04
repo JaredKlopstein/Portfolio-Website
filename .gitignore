@@ -7,18 +7,40 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies & build output
 node_modules
+node_modules.nosync
+node_modules_old*
+.trash-*
+*.nosync
 dist
 dist-ssr
 *.local
+
+# Environment
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# iCloud sync artifacts (Desktop/Documents folders)
+* 2.*
+* 2
+*.icloud
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*

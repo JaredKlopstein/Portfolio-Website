@@ -71,13 +71,13 @@ html {
 
 .btn-primary {
   background: var(--accent-gradient);
-  color: white;
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  color: #0b0d10;
+  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.25);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 6px 20px rgba(20, 184, 166, 0.35);
 }
 
 .btn-secondary {

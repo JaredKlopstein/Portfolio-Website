@@ -20,7 +20,7 @@
 
 .hero-title {
   font-size: 3.5rem;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 1rem;
   color: var(--text-primary);
   line-height: 1.2;
@@ -28,9 +28,9 @@
 
 .hero-subtitle {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 1.5rem;
-  color: var(--text-secondary);
+  color: var(--text-tertiary);
 }
 
 .hero-tagline {
