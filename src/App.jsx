@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Currently from './components/Currently';
-import AscellaStudios from './components/AscellaStudios';
+import Intro from './components/Intro';
+import Now from './components/Now';
+import Ascella from './components/Ascella';
 import SayHi from './components/SayHi';
 import Footer from './components/Footer';
 
@@ -27,11 +26,10 @@ function App() {
   return (
     <div className="app">
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <main>
-        <Hero />
-        <About />
-        <Currently />
-        <AscellaStudios />
+      <main className="page">
+        <Intro />
+        <Now />
+        <Ascella />
         <SayHi />
       </main>
       <Footer />

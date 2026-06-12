@@ -1,0 +1,44 @@
+.now-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0;
+}
+
+.now-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 1.25rem;
+  align-items: baseline;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.now-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.now-label {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.02em;
+}
+
+.now-value {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-primary);
+}
+
+@media (max-width: 640px) {
+  .now-row {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+
+  .now-value {
+    font-size: 1rem;
+  }
+}

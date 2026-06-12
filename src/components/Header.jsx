@@ -1,89 +1,37 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Sun, Moon } from 'lucide-react';
 import './Header.css';
 
 const Header = ({ theme, toggleTheme }) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 24);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
-    }
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
-  const navLinks = [
-    { id: 'about', label: 'About' },
-    { id: 'currently', label: 'Currently' },
-    { id: 'ascella', label: 'Ascella Studios' },
-    { id: 'say-hi', label: 'Say hi' },
-  ];
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
-        <button
-          className="logo-btn"
-          onClick={() => scrollToSection('hero')}
-          aria-label="Go to top"
-        >
-          <span className="logo-text">Jared Klopstein</span>
+        <button className="logo-btn" onClick={scrollToTop} aria-label="Go to top">
+          <span className="logo-text">jk</span>
         </button>
 
-        <nav className={`nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-          <ul className="nav-links">
-            {navLinks.map(link => (
-              <li key={link.id}>
-                <button onClick={() => scrollToSection(link.id)}>
-                  {link.label}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <div className="header-actions">
-          <button
-            className="theme-toggle"
-            onClick={toggleTheme}
-            aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-          >
-            {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-          </button>
-
-          <button
-            className="mobile-menu-toggle"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
+        <button
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+        >
+          {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+        </button>
       </div>
-
-      {isMobileMenuOpen && (
-        <div className="mobile-menu">
-          <ul>
-            {navLinks.map(link => (
-              <li key={link.id}>
-                <button onClick={() => scrollToSection(link.id)}>
-                  {link.label}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </header>
   );
 };

@@ -1,0 +1,65 @@
+.intro {
+  padding-top: 0;
+}
+
+.intro-identity {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.intro-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.intro-name {
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.intro-role {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  margin: 0.35rem 0 0;
+}
+
+.intro-bio p + p {
+  margin-top: 1rem;
+}
+
+.intro-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+  padding: 0;
+}
+
+.intro-links a {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.intro-links a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .intro-avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .intro-name {
+    font-size: 1.75rem;
+  }
+}
