@@ -2,5 +2,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap location (update after deployment)
-# Sitemap: https://jaredklopstein.dev/sitemap.xml
+Sitemap: https://jaredklopstein.dev/sitemap.xml

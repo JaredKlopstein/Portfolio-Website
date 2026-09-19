@@ -70,7 +70,11 @@ npm run lint     # eslint
 
 `npm run build` also runs `scripts/check-deploy-config.mjs`, which fails the
 build if `vercel.json` loses its security headers or regains a catch-all
-rewrite, or if `dist/404.html` is missing.
+rewrite, or if `dist/404.html` is missing, or if `dist/sitemap.xml` stops
+listing `https://jaredklopstein.dev/` or `dist/robots.txt` stops advertising it.
+
+`public/sitemap.xml` lists the one URL this single-page site has — bump its
+`<lastmod>` when the page content changes.
 
 Deployed on Vercel. No rewrites: unknown paths serve `public/404.html` with a
 404 status, and `vercel.json` sets `X-Content-Type-Options`, `X-Frame-Options`,

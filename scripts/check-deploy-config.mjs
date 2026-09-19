@@ -1,5 +1,6 @@
 // Guards the launch-readiness contract of the Vercel deploy: security headers on
-// every response, and a real 404 for unknown paths. Runs as part of `npm run build`.
+// every response, a real 404 for unknown paths, and a crawlable sitemap that
+// robots.txt points at. Runs as part of `npm run build`.
 import { existsSync, readFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -47,9 +48,33 @@ if (catchAll) {
   failures.push('vercel.json rewrites every path to /index.html, so unknown paths return 200')
 }
 
-for (const file of ['index.html', '404.html']) {
+for (const file of ['index.html', '404.html', 'sitemap.xml', 'robots.txt']) {
   if (!existsSync(resolve(root, 'dist', file))) {
     failures.push(`dist/${file} is missing from the build output`)
+  }
+}
+
+// /sitemap.xml must be a real sitemap listing the canonical URL, and robots.txt
+// must advertise it on an uncommented Sitemap: line so crawlers find it.
+const site = 'https://jaredklopstein.dev'
+const sitemapPath = resolve(root, 'dist', 'sitemap.xml')
+if (existsSync(sitemapPath)) {
+  const sitemap = readFileSync(sitemapPath, 'utf8')
+  if (!sitemap.includes('<urlset')) {
+    failures.push('dist/sitemap.xml has no <urlset> element')
+  }
+  if (!sitemap.includes(`<loc>${site}/</loc>`)) {
+    failures.push(`dist/sitemap.xml does not list ${site}/ as a <loc>`)
+  }
+}
+
+const robotsPath = resolve(root, 'dist', 'robots.txt')
+if (existsSync(robotsPath)) {
+  const advertisesSitemap = readFileSync(robotsPath, 'utf8')
+    .split('\n')
+    .some((line) => line.trim().toLowerCase() === `sitemap: ${site}/sitemap.xml`)
+  if (!advertisesSitemap) {
+    failures.push(`dist/robots.txt has no uncommented "Sitemap: ${site}/sitemap.xml" line`)
   }
 }
 
@@ -59,4 +84,6 @@ if (failures.length > 0) {
   process.exit(1)
 }
 
-console.log('Deploy config check passed: security headers set, 404 page shipped.')
+console.log(
+  'Deploy config check passed: security headers set, 404 page shipped, sitemap published.'
+)
