@@ -30,6 +30,12 @@ Engineering: Claude Code via `cc issue-to-pr`
 Operations: `cc monitor`, `cc preflight`
 Local AI: Ollama, for `local-ok` / `size:S` issues
 
+## Command Center
+Issues labelled `ai-ready` are picked up and worked by an agent through
+`cc issue-to-pr`, which clones the repo, runs the setup and test commands, and
+opens a pull request. Every pull request is reviewed by a human before it is
+merged — no agent change reaches `main` on its own.
+
 ## Permissions
 Repository read: yes
 Repository write: yes, through the Command Center loop; every PR is reviewed
