@@ -16,6 +16,9 @@ npm run build    # outputs to dist/
 
 ## Deploy
 
-Deployed on Vercel; `vercel.json` rewrites all routes to `index.html`.
+Deployed on Vercel. `vercel.json` sets security headers on every response
+(`X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, and a
+`frame-ancestors` CSP). There is no catch-all rewrite — the site has no router,
+so unknown paths fall through to `public/404.html` with a real 404 status.
 
 See `CLAUDE.md` for layout, design-system, and copy-voice notes.
