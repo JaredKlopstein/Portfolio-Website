@@ -68,5 +68,11 @@ npm run build    # production build → dist/
 npm run lint     # eslint
 ```
 
-Deployed on Vercel (all routes rewrite to `index.html` via `vercel.json`).
+`npm run build` also runs `scripts/check-deploy-config.mjs`, which fails the
+build if `vercel.json` loses its security headers or regains a catch-all
+rewrite, or if `dist/404.html` is missing.
+
+Deployed on Vercel. No rewrites: unknown paths serve `public/404.html` with a
+404 status, and `vercel.json` sets `X-Content-Type-Options`, `X-Frame-Options`,
+`Referrer-Policy`, and a `frame-ancestors` CSP on every response.
 Domain: jaredklopstein.dev.
