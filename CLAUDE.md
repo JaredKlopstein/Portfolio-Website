@@ -1,8 +1,9 @@
 # Portfolio Website — jaredklopstein.dev
 
-Personal site for Jared Klopstein, founder of Ascella Studios. A single-page,
-text-first personal site in the vein of leerob.com / antfu.me — short bio,
-dated "now" section, honest studio blurb, email. No projects grid, no skills
+Personal site for Jared Klopstein. A single-page, text-first "here's what I'm
+doing" page in the vein of leerob.com / antfu.me — short bio, dated "now"
+section, one short blurb + link for each company (Ascella Studios, Frontier
+Forge Technologies), a personal-project placeholder, email. No projects grid, no skills
 list, no blog, no contact form. Content is intentionally sparse; resist adding
 sections back.
 
@@ -24,7 +25,8 @@ Page order (`src/App.jsx`):
 | `Header` | Fixed minimal bar: "jk" logo (scrolls to top) + theme toggle. No nav. |
 | `Intro` | Avatar + name + mono role line, 3-paragraph bio, mono text links (GitHub / LinkedIn / X). Replaces the old Hero + About. |
 | `Now` | /now-style list of label→value rows. Has an `UPDATED` constant — **bump it whenever the items change**, it's the section's credibility. |
-| `Ascella` | 1 short honest paragraph + plain mono link to ascellastudios.com. No mission statements, no gradient billboards. |
+| `Venture` (×2) | Generic company block, used once for Ascella Studios and once for Frontier Forge Technologies: 1 short honest paragraph + plain mono link to the company site. Copy lives in `App.jsx`. Generic info only — no product names, no mission statements, no gradient billboards. |
+| `Personal` | One-line placeholder for Jared's own project. Replace with a real blurb + link when it exists. |
 | `SayHi` | Click-to-copy email button (`hello@jaredklopstein.dev`), mailto fallback. |
 | `Footer` | © year + text social links. |
 
@@ -51,11 +53,13 @@ read as performed humility. Keep content about the tech/entrepreneur journey
 only — no personal life-goal items (e.g. an "Italy" line was removed on
 request). When editing copy, match this register.
 
-## Facts that gate content (as of June 2026)
+## Facts that gate content (as of November 2026)
 
-- ascellastudios.com is live and being rebuilt from scratch in a separate
-  effort; the next Ascella product is a mobile app, unannounced. Do not name
-  unreleased products here.
+- The company sections stay generic on purpose: describe each company and
+  link to its site (ascellastudios.com, frontierforge.tech). Do not name
+  individual products here; the company sites own that.
+- The personal project is unannounced. Keep the placeholder until Jared says
+  otherwise.
 - OG/Twitter image is `public/me.jpg` (square, `summary` card). There is no
   `og-image.png`; if one is added to `public/`, switch the meta tags in
   `index.html` back to `summary_large_image`.
