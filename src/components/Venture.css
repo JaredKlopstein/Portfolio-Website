@@ -1,4 +1,4 @@
-.ascella-link {
+.venture-link {
   display: inline-block;
   margin-top: 0.5rem;
   font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -7,15 +7,15 @@
   transition: color 0.2s ease;
 }
 
-.ascella-link:hover {
+.venture-link:hover {
   color: var(--accent-light);
 }
 
-.ascella-link span {
+.venture-link span {
   display: inline-block;
   transition: transform 0.2s ease;
 }
 
-.ascella-link:hover span {
+.venture-link:hover span {
   transform: translate(2px, -2px);
 }

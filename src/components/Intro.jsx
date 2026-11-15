@@ -7,15 +7,16 @@ const Intro = () => {
         <img className="intro-avatar" src="/me.jpg" alt="Jared Klopstein" />
         <div>
           <h1 className="intro-name">Jared Klopstein</h1>
-          <p className="intro-role">founder, Ascella Studios</p>
+          <p className="intro-role">building at Ascella Studios &amp; Frontier Forge</p>
         </div>
       </div>
 
       <div className="intro-bio">
         <p>
-          I build apps. <a href="https://ascellastudios.com" target="_blank" rel="noopener noreferrer" className="text-link">Ascella Studios</a> is
-          my studio — one person, a few ideas worth shipping, and a long
-          horizon.
+          I build software, mostly with AI agents doing the typing. It happens
+          in two places: <a href="https://ascellastudios.com" target="_blank" rel="noopener noreferrer" className="text-link">Ascella Studios</a>,
+          my app studio, and <a href="https://frontierforge.tech" target="_blank" rel="noopener noreferrer" className="text-link">Frontier Forge Technologies</a>,
+          the company I co-founded.
         </p>
         <p>
           By day I work on payment processing infrastructure (HP NonStop) —

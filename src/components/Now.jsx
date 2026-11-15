@@ -1,19 +1,19 @@
 import './Now.css';
 
-const UPDATED = 'June 2026';
+const UPDATED = 'November 2026';
 
 const items = [
   {
     label: 'building',
-    value: 'The next Ascella app. Mobile, this time.'
+    value: 'Tools that let AI agents do real work, and show what they did.'
   },
   {
     label: 'learning',
-    value: 'Building with AI — what it actually changes, and what it doesn’t.'
+    value: 'Claude Certified Architect. One domain at a time.'
   },
   {
     label: 'avoiding',
-    value: 'The urge to polish instead of ship.'
+    value: 'Starting something new before finishing the last thing.'
   }
 ];
 

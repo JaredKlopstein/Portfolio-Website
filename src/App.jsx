@@ -3,7 +3,8 @@ import './App.css';
 import Header from './components/Header';
 import Intro from './components/Intro';
 import Now from './components/Now';
-import Ascella from './components/Ascella';
+import Venture from './components/Venture';
+import Personal from './components/Personal';
 import SayHi from './components/SayHi';
 import Footer from './components/Footer';
 
@@ -29,7 +30,27 @@ function App() {
       <main className="page">
         <Intro />
         <Now />
-        <Ascella />
+        <Venture
+          id="ascella"
+          label="ascella studios"
+          url="https://ascellastudios.com"
+          linkText="ascellastudios.com"
+        >
+          My software studio, and the consumer side of Frontier Forge. We
+          design, launch and maintain our own apps, and build websites and
+          software for small businesses and founders.
+        </Venture>
+        <Venture
+          id="frontier-forge"
+          label="frontier forge technologies"
+          url="https://frontierforge.tech"
+          linkText="frontierforge.tech"
+        >
+          The company I co-founded with two partners. A small team building
+          AI agents, automation and custom software that take routine work
+          off people&rsquo;s plates.
+        </Venture>
+        <Personal />
         <SayHi />
       </main>
       <Footer />
